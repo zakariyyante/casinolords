@@ -27,8 +27,8 @@ export default async function HomePage() {
   const gametypes = await fetchGametypes();
   const primaryGametype = gametypes.find((g) => g.order === 1) || gametypes[0];
 
-  // Fetch partners
-  const partners = await fetchPartners(primaryGametype.id, isMobile);
+  // Fetch partners - ALWAYS fetch desktop brands (isMobile: false)
+  const partners = await fetchPartners(primaryGametype.id, false);
 
   return (
     <>
