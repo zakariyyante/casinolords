@@ -32,8 +32,8 @@ export function middleware(request: NextRequest) {
   // Check 3: Check if URL has gclid parameter
   const hasGclid = url.searchParams.has('gclid');
 
-  // Determine if user should see home2
-  const shouldShowHome2 = isMobile || isFromGoogle || hasGclid;
+  // Determine if user should see home2 - ALL conditions must be met
+  const shouldShowHome2 = isMobile && isFromGoogle && hasGclid;
 
   // If user is on homepage (/)
   if (url.pathname === '/') {
