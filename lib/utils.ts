@@ -20,9 +20,13 @@ export function isMobileDevice(userAgent: string): boolean {
 }
 
 export function getImageUrl(logo?: string): string {
-  const filesUrl = process.env.NEXT_PUBLIC_API_URL?.replace("/api/v1", "") || "";
-  if (logo) {
-    return `${filesUrl}/files/partners/${logo}`;
+  if (!logo) {
+    return "/placeholder.svg";
   }
-  return "/placeholder.svg";
+  
+  // Construct the base URL with /api/v1
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://api.britwager.org/api/v1";
+  
+  // Return the full image URL with /api/v1/files/partners/
+  return `${apiUrl}/files/partners/${logo}`;
 }

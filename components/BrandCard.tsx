@@ -18,6 +18,7 @@ export default function BrandCard({
   isMobile,
 }: BrandCardProps) {
   const [linkUrl, setLinkUrl] = useState(partner.partnerUrl);
+  const [imageError, setImageError] = useState(false);
   const rating = calculateRating(order);
   const stars = calculateStars(order);
   const votes = Math.floor(Math.random() * 5000) + 1000;
@@ -32,7 +33,11 @@ export default function BrandCard({
     }
   }, [partner.partnerUrl]);
 
-  const imageUrl = getImageUrl(partner.partner?.logo || partner.logo);
+  const logoPath = partner.partner?.logo || partner.logo;
+  const imageUrl = logoPath 
+    ? `https://api.britwager.org/api/v1/files/partners/${logoPath}`
+    : "/placeholder.svg";
+  const displayImageUrl = imageError ? "/placeholder.svg" : imageUrl;
 
   if (isMobile) {
     return (
@@ -46,16 +51,26 @@ export default function BrandCard({
         <div className="flex justify-between gap-4 mb-4">
           {/* Left: Logo */}
           <div className="flex-shrink-0">
-            <div className="w-44 h-28 relative bg-background-light rounded-lg overflow-hidden border border-cta/20">
-              <Image
-                src={imageUrl}
-                alt={partner.name}
-                fill
-                className="object-contain p-2"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = "/placeholder.svg";
-                }}
-              />
+            <div className="w-44 h-28 bg-background-light rounded-lg overflow-hidden border border-cta/20 flex items-center justify-center">
+              {displayImageUrl.startsWith("http") ? (
+                <img
+                  src={displayImageUrl}
+                  alt={partner.name}
+                  className="max-w-full max-h-full object-contain p-2"
+                  onError={() => setImageError(true)}
+                />
+              ) : (
+                <div className="relative w-full h-full">
+                  <Image
+                    src={displayImageUrl}
+                    alt={partner.name}
+                    fill
+                    className="object-contain p-2"
+                    unoptimized
+                    onError={() => setImageError(true)}
+                  />
+                </div>
+              )}
             </div>
           </div>
 
@@ -112,16 +127,26 @@ export default function BrandCard({
       <div className="flex items-center gap-6">
         {/* Logo */}
         <div className="flex-shrink-0">
-          <div className="w-44 h-44 relative bg-background-light rounded-lg overflow-hidden border border-cta/20">
-            <Image
-              src={imageUrl}
-              alt={partner.name}
-              fill
-              className="object-contain p-4"
-              onError={(e) => {
-                (e.target as HTMLImageElement).src = "/placeholder.svg";
-              }}
-            />
+          <div className="w-44 h-44 bg-background-light rounded-lg overflow-hidden border border-cta/20 flex items-center justify-center">
+            {displayImageUrl.startsWith("http") ? (
+              <img
+                src={displayImageUrl}
+                alt={partner.name}
+                className="max-w-full max-h-full object-contain p-4"
+                onError={() => setImageError(true)}
+              />
+            ) : (
+              <div className="relative w-full h-full">
+                <Image
+                  src={displayImageUrl}
+                  alt={partner.name}
+                  fill
+                  className="object-contain p-4"
+                  unoptimized
+                  onError={() => setImageError(true)}
+                />
+              </div>
+            )}
           </div>
         </div>
 

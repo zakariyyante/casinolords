@@ -1,16 +1,34 @@
 import { Partner, Gametype } from "./mockDev";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.britwager.org/api/v1";
+// Ensure API URL always ends with /api/v1
+const getApiUrl = () => {
+  const envUrl = process.env.NEXT_PUBLIC_API_URL;
+  if (envUrl) {
+    return envUrl.endsWith("/") ? envUrl.slice(0, -1) : envUrl;
+  }
+  return "https://api.britwager.org/api/v1";
+};
+
+const API_URL = getApiUrl();
 
 export async function fetchGametypes(): Promise<Gametype[]> {
   try {
-    const response = await fetch(`${API_URL}/gametypes`, {
+    const apiUrl = `${API_URL}/gametypes`;
+    
+    const response = await fetch(apiUrl, {
       cache: "no-store",
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
+    
     if (!response.ok) {
-      throw new Error("Failed to fetch gametypes");
+      console.error(`Failed to fetch gametypes: ${response.status} ${response.statusText}`);
+      throw new Error(`Failed to fetch gametypes: ${response.status}`);
     }
-    return await response.json();
+    
+    const data = await response.json();
+    return data;
   } catch (error) {
     console.error("Error fetching gametypes:", error);
     const { mockGametypes } = await import("./mockDev");
@@ -24,19 +42,27 @@ export async function fetchPartners(
 ): Promise<Partner[]> {
   try {
     const url = `${API_URL}/online-partners?gametypeId=${gametypeId}&status=true`;
+    
     const response = await fetch(url, {
       cache: "no-store",
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
+    
     if (!response.ok) {
-      throw new Error("Failed to fetch partners");
+      console.error(`Failed to fetch partners: ${response.status} ${response.statusText}`);
+      throw new Error(`Failed to fetch partners: ${response.status}`);
     }
+    
     const partners: Partner[] = await response.json();
     
     // Filter by isMobile on server side
     if (isMobile) {
       return partners; // Show all on mobile
     } else {
-      return partners.filter((p) => p.isMobile === false);
+      const filtered = partners.filter((p) => p.isMobile === false);
+      return filtered;
     }
   } catch (error) {
     console.error("Error fetching partners:", error);
