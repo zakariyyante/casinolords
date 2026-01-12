@@ -106,7 +106,7 @@ export default function PrivacyPage() {
             <p className="leading-relaxed">
               We may use third-party services for analytics, advertising, and
               website functionality. These services have their own privacy
-              policies. When you click on links to betting operators, you will
+              policies. When you click on links to platforms, you will
               be subject to their privacy policies.
             </p>
           </section>

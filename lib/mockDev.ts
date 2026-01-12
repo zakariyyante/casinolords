@@ -37,25 +37,25 @@ export const mockGametypes: Gametype[] = [
   {
     id: 1,
     order: 1,
-    headText: "Welcome to BritWager - Your Premier UK Betting Destination",
+    headText: "Welcome to BritWager - Your Premier UK Platform",
     headParagraph:
-      "Discover the finest selection of UK-licensed betting brands. Compare exclusive bonuses, secure payment methods, and trusted operators all in one place.",
-    pageTitle: "BritWager - UK's Premier Betting Affiliate Platform",
+      "Discover the finest selection of UK-licensed brands. Compare exclusive bonuses, secure payment methods, and trusted platforms all in one place.",
+    pageTitle: "BritWager - UK's Premier Affiliate Platform",
   },
   {
     id: 2,
     order: 2,
-    headText: "Top UK Betting Brands - Exclusive Offers & Bonuses",
+    headText: "Top UK Platforms - Exclusive Offers & Bonuses",
     headParagraph:
-      "Find the best betting sites with exclusive welcome bonuses, fast withdrawals, and premium gaming experiences tailored for UK players.",
-    pageTitle: "Top UK Betting Brands - Exclusive Offers | BritWager",
+      "Find the best sites with exclusive welcome bonuses, fast withdrawals, and premium experiences tailored for UK players.",
+    pageTitle: "Top UK Platforms - Exclusive Offers | BritWager",
   },
 ];
 
 export const mockPartners: Partner[] = [
   {
     id: 1,
-    name: "Premium Bet UK",
+    name: "Premium Platform UK",
     logo: "premium-bet-logo.png",
     bonusText: "Get up to £100 Welcome Bonus + 50 Free Spins",
     paymentMethods: [
@@ -68,10 +68,10 @@ export const mockPartners: Partner[] = [
       { id: 1, text: "UK Gambling Commission Licensed" },
       { id: 2, text: "Same-Day Withdrawals" },
     ],
-    partnerUrl: "https://example-betting-site.com?ref=",
+    partnerUrl: "https://example-site.com?ref=",
     isMobile: false,
     partner: {
-      name: "Premium Bet UK",
+      name: "Premium Platform UK",
       logo: "premium-bet-logo.png",
     },
   },

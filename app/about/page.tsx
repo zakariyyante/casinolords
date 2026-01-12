@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Us - BritWager",
-  description: "Learn about BritWager and our mission to help UK bettors find the best betting operators",
+  description: "Learn about BritWager and our mission to help UK users find the best platforms",
 };
 
 export default function AboutPage() {
@@ -17,17 +17,17 @@ export default function AboutPage() {
         <div className="prose prose-invert max-w-none space-y-6 text-text/90">
           <p className="text-lg leading-relaxed">
             BritWager is an independent affiliate website dedicated to helping
-            UK bettors discover and compare the best licensed betting operators
+            UK users discover and compare the best licensed platforms
             in the United Kingdom. Founded with a commitment to transparency,
-            safety, and responsible gambling, we provide comprehensive
-            information about UK-licensed betting brands.
+            safety, and responsible gaming, we provide comprehensive
+            information about UK-licensed brands.
           </p>
 
           <h2 className="text-2xl font-bold text-cta mt-8 mb-4">Our Mission</h2>
           <p className="leading-relaxed">
-            Our mission is to simplify the process of finding the right betting
-            operator for UK players. We carefully review and compare
-            UK-licensed betting brands, highlighting their features, bonuses,
+            Our mission is to simplify the process of finding the right
+            platform for UK players. We carefully review and compare
+            UK-licensed brands, highlighting their features, bonuses,
             payment methods, and customer service to help you make informed
             decisions.
           </p>
@@ -37,7 +37,7 @@ export default function AboutPage() {
           </h2>
           <ul className="space-y-3 list-disc list-inside">
             <li>
-              Compare UK-licensed betting operators based on bonuses, features,
+              Compare UK-licensed platforms based on bonuses, features,
               and services
             </li>
             <li>
@@ -47,7 +47,7 @@ export default function AboutPage() {
               Offer transparent, honest reviews and comparisons
             </li>
             <li>
-              Promote responsible gambling and provide access to support
+              Promote responsible gaming and provide access to support
               resources
             </li>
           </ul>
@@ -56,20 +56,20 @@ export default function AboutPage() {
             Our Commitment to Safety
           </h2>
           <p className="leading-relaxed">
-            All betting operators featured on BritWager are licensed by the UK
-            Gambling Commission. We only feature operators that meet strict
+            All platforms featured on BritWager are licensed by the UK
+            Gambling Commission. We only feature platforms that meet strict
             regulatory standards for security, fairness, and responsible
-            gambling practices.
+            gaming practices.
           </p>
 
           <h2 className="text-2xl font-bold text-cta mt-8 mb-4">
-            Responsible Gambling
+            Responsible Gaming
           </h2>
           <p className="leading-relaxed">
-            We are committed to promoting responsible gambling. All operators on
-            our platform are required to provide tools for responsible gambling,
+            We are committed to promoting responsible gaming. All platforms on
+            our site are required to provide tools for responsible gaming,
             including deposit limits, self-exclusion options, and access to
-            support services. If you need help with problem gambling, please
+            support services. If you need help, please
             visit the support organizations listed in our footer.
           </p>
 
@@ -79,9 +79,9 @@ export default function AboutPage() {
             </h3>
             <p className="text-sm leading-relaxed">
               BritWager is an independent affiliate website. We may receive
-              commissions from operators when you sign up through our links, but
+              commissions from platforms when you sign up through our links, but
               this does not influence our reviews or the information we provide.
-              Our goal is to help you find the best betting operator for your
+              Our goal is to help you find the best platform for your
               needs.
             </p>
           </div>

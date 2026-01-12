@@ -37,7 +37,7 @@ export default function Footer({ currentYear, currentMonth }: FooterProps) {
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-cta/10 rounded-lg border border-cta/30">
             <span className="text-2xl font-bold">18+</span>
             <span className="text-sm">
-              You must be 18 or over to use this service. Please gamble responsibly.
+              You must be 18 or over to use this service. Please play responsibly.
             </span>
           </div>
         </div>
@@ -58,17 +58,17 @@ export default function Footer({ currentYear, currentMonth }: FooterProps) {
           ))}
         </div>
 
-        {/* Responsible Gambling Disclaimer */}
+        {/* Responsible Gaming Disclaimer */}
         <div className="text-center mb-6 text-sm text-text/80 max-w-3xl mx-auto">
           <p className="mb-2">
-            <strong>Responsible Gambling:</strong> Gambling can be addictive.
-            Please play responsibly. If you feel you may have a gambling problem,
-            seek help immediately from the organizations listed above.
+            <strong>Responsible Gaming:</strong> Entertainment can be addictive.
+            Please play responsibly. If you need help,
+            seek support immediately from the organizations listed above.
           </p>
           <p>
-            All betting operators featured on this site are licensed by the UK
+            All platforms featured on this site are licensed by the UK
             Gambling Commission. We are an independent affiliate website and are
-            not responsible for the content or services of third-party operators.
+            not responsible for the content or services of third-party platforms.
           </p>
         </div>
 
@@ -110,8 +110,8 @@ export default function Footer({ currentYear, currentMonth }: FooterProps) {
             {currentYear}
           </p>
           <p className="mt-2">
-            This website is operated by an independent affiliate. All betting
-            operators are licensed by the UK Gambling Commission.
+            This website is operated by an independent affiliate. All
+            platforms are licensed by the UK Gambling Commission.
           </p>
         </div>
       </div>

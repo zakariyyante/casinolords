@@ -19,7 +19,7 @@ export default function Header() {
       <div className="container mx-auto px-4">
         {/* 18+ Disclaimer */}
         <div className="text-center py-2 text-xs text-cta border-b border-cta/10">
-          <span className="font-semibold">18+</span> | BeGambleAware.org | Gamble
+          <span className="font-semibold">18+</span> | BeGambleAware.org | Play
           Responsibly
         </div>
 

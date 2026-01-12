@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms and Conditions - BritWager",
-  description: "Read BritWager's terms and conditions for using our affiliate betting platform",
+  description: "Read BritWager's terms and conditions for using our affiliate platform",
 };
 
 export default function TermsPage() {
@@ -39,7 +39,7 @@ export default function TermsPage() {
             <p className="leading-relaxed">
               You must be 18 years of age or older to use this Website. By using
               this Website, you confirm that you are at least 18 years old and
-              of legal age to gamble in your jurisdiction.
+              of legal age to participate in your jurisdiction.
             </p>
           </section>
 
@@ -49,7 +49,7 @@ export default function TermsPage() {
             </h2>
             <p className="leading-relaxed">
               BritWager is an independent affiliate website. We may receive
-              commissions from betting operators when you sign up through links
+              commissions from platforms when you sign up through links
               on our Website. This does not affect the bonuses, services, or
               information we provide. All reviews and comparisons are based on
               our independent assessment.
@@ -61,10 +61,10 @@ export default function TermsPage() {
               4. Third-Party Operators
             </h2>
             <p className="leading-relaxed">
-              All betting operators featured on BritWager are licensed by the UK
+              All platforms featured on BritWager are licensed by the UK
               Gambling Commission. However, BritWager is not responsible for the
-              content, services, terms, or practices of third-party betting
-              operators. Your relationship with any betting operator is
+              content, services, terms, or practices of third-party
+              platforms. Your relationship with any platform is
               independent of BritWager.
             </p>
           </section>
@@ -75,20 +75,20 @@ export default function TermsPage() {
             </h2>
             <p className="leading-relaxed">
               All bonuses and offers are subject to the terms and conditions of
-              the respective betting operators. BritWager does not guarantee the
+              the respective platforms. BritWager does not guarantee the
               availability, accuracy, or terms of any bonus or offer. Always read
-              the operator's terms and conditions before claiming any bonus.
+              the platform's terms and conditions before claiming any bonus.
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-cta mb-4">
-              6. Responsible Gambling
+              6. Responsible Gaming
             </h2>
             <p className="leading-relaxed">
-              Gambling can be addictive. Please gamble responsibly and only bet
-              what you can afford to lose. If you feel you may have a gambling
-              problem, seek help immediately from organizations like
+              Entertainment can be addictive. Please play responsibly and only use
+              what you can afford to lose. If you need help,
+              seek support immediately from organizations like
               BeGambleAware, GamCare, or the National Gambling Helpline (0808
               8020 133).
             </p>
@@ -101,7 +101,7 @@ export default function TermsPage() {
             <p className="leading-relaxed">
               BritWager provides information "as is" without warranties of any
               kind. We are not liable for any losses, damages, or issues arising
-              from your use of third-party betting operators or the information
+              from your use of third-party platforms or the information
               provided on this Website.
             </p>
           </section>

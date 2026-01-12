@@ -11,8 +11,8 @@ export const revalidate = 0;
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "BritWager - UK's Premier Betting Affiliate Platform",
-  description: "Discover the best UK betting brands with exclusive bonuses and offers",
+  title: "BritWager - UK's Premier Affiliate Platform",
+  description: "Discover the best UK platforms with exclusive bonuses and offers",
 };
 
 export default function RootLayout({

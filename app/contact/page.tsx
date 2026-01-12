@@ -23,7 +23,7 @@ export default function ContactPage() {
             </h2>
             <p className="leading-relaxed mb-4">
               For general inquiries about BritWager, our services, or the
-              operators featured on our platform, please use the contact
+              platforms featured on our site, please use the contact
               information below.
             </p>
             <p className="text-cta font-semibold">
@@ -33,10 +33,10 @@ export default function ContactPage() {
 
           <div className="bg-panel border border-cta/30 rounded-lg p-6 my-8">
             <h2 className="text-2xl font-bold text-cta mb-4">
-              Operator Inquiries
+              Platform Inquiries
             </h2>
             <p className="leading-relaxed">
-              If you are a UK-licensed betting operator interested in being
+              If you are a UK-licensed platform interested in being
               featured on BritWager, please contact us with your licensing
               information and details about your services.
             </p>
@@ -44,10 +44,10 @@ export default function ContactPage() {
 
           <div className="bg-panel border border-cta/30 rounded-lg p-6 my-8">
             <h2 className="text-2xl font-bold text-cta mb-4">
-              Responsible Gambling Support
+              Support Resources
             </h2>
             <p className="leading-relaxed mb-4">
-              If you need help with problem gambling, please contact one of
+              If you need help, please contact one of
               these organizations:
             </p>
             <ul className="space-y-2 list-disc list-inside">
@@ -85,7 +85,7 @@ export default function ContactPage() {
             </h3>
             <p className="text-sm leading-relaxed">
               We aim to respond to all inquiries within 2-3 business days.
-              For urgent matters related to responsible gambling, please contact
+              For urgent matters, please contact
               the support organizations listed above immediately.
             </p>
           </div>

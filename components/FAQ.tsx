@@ -9,19 +9,19 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
-    question: "Is BritWager a licensed betting operator?",
+    question: "Is BritWager a licensed platform?",
     answer:
-      "No, BritWager is an independent affiliate website that compares UK-licensed betting operators. We do not provide betting services directly. All operators featured on our site are licensed by the UK Gambling Commission.",
+      "No, BritWager is an independent affiliate website that compares UK-licensed platforms. We do not provide services directly. All platforms featured on our site are licensed by the UK Gambling Commission.",
   },
   {
     question: "How do I claim the bonuses shown?",
     answer:
-      "Click on any betting brand card to visit their website. Bonuses are typically available to new customers who meet the operator's terms and conditions. Always read the full terms before claiming any bonus.",
+      "Click on any brand card to visit their website. Bonuses are typically available to new customers who meet the platform's terms and conditions. Always read the full terms before claiming any bonus.",
   },
   {
-    question: "Are the betting sites safe and secure?",
+    question: "Are the sites safe and secure?",
     answer:
-      "Yes, all betting operators featured on BritWager are licensed by the UK Gambling Commission, which ensures they meet strict security, fairness, and responsible gambling standards.",
+      "Yes, all platforms featured on BritWager are licensed by the UK Gambling Commission, which ensures they meet strict security, fairness, and responsible gaming standards.",
   },
   {
     question: "What payment methods are accepted?",
@@ -29,24 +29,24 @@ const faqData: FAQItem[] = [
       "Payment methods vary by operator. Common methods include Visa, Mastercard, PayPal, Skrill, Neteller, and bank transfers. Check each operator's card for specific payment options.",
   },
   {
-    question: "How quickly can I withdraw my winnings?",
+    question: "How quickly can I withdraw my funds?",
     answer:
-      "Withdrawal times vary by operator and payment method. Many UK-licensed operators offer same-day or next-day withdrawals for e-wallets. Bank transfers typically take 3-5 business days.",
+      "Withdrawal times vary by platform and payment method. Many UK-licensed platforms offer same-day or next-day withdrawals for e-wallets. Bank transfers typically take 3-5 business days.",
   },
   {
     question: "Is there a minimum deposit requirement?",
     answer:
-      "Most operators have a minimum deposit requirement, typically around £10-£20. This information is usually displayed on each operator's card or in their terms and conditions.",
+      "Most platforms have a minimum deposit requirement, typically around £10-£20. This information is usually displayed on each platform's card or in their terms and conditions.",
   },
   {
-    question: "What should I do if I have a gambling problem?",
+    question: "What should I do if I need help?",
     answer:
-      "If you feel you may have a gambling problem, seek help immediately. Visit BeGambleAware.org, GamCare.org.uk, or call the National Gambling Helpline at 0808 8020 133. Links to support organizations are available in our footer.",
+      "If you need support, seek help immediately. Visit BeGambleAware.org, GamCare.org.uk, or call the National Gambling Helpline at 0808 8020 133. Links to support organizations are available in our footer.",
   },
   {
     question: "Do you charge any fees for using your service?",
     answer:
-      "No, BritWager is completely free to use. We are an affiliate website, which means we may receive a commission from operators when you sign up through our links, but this does not affect the bonuses or services you receive.",
+      "No, BritWager is completely free to use. We are an affiliate website, which means we may receive a commission from platforms when you sign up through our links, but this does not affect the bonuses or services you receive.",
   },
 ];
 
