@@ -22,7 +22,6 @@ export default async function HomePage2() {
   const userAgent = headersList.get("user-agent") || "";
   const isMobile = isMobileDevice(userAgent);
 
-  // Fetch gametypes and use order === 2 for hero
   const gametypes = await fetchGametypes();
   const secondaryGametype = gametypes.find((g) => g.order === 2) || gametypes[0];
 
