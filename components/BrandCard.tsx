@@ -41,7 +41,7 @@ export default function BrandCard({
   const displayImageUrl = imageError ? '/placeholder.svg' : imageUrl;
 
   const handlePartnerClick = () => {
-    track('partner_click', { partner_name: partner.name });
+    track('partner_click', { partner_name: partner?.partner?.name });
   };
 
   if (isMobile) {
