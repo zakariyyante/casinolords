@@ -41,7 +41,19 @@ export default function BrandCard({
   const displayImageUrl = imageError ? '/placeholder.svg' : imageUrl;
 
   const handlePartnerClick = () => {
-    track('partner_click', { partner_name: partner?.partner?.name });
+    const partnerName = partner?.partner?.name || partner.name;
+    
+    // Track with Vercel Analytics
+    track('partner_click', { partner_name: partnerName });
+    
+    // Track with Plausible Analytics
+    if (typeof window !== 'undefined' && window.plausible) {
+      window.plausible('Brand Click', {
+        props: {
+          brand: partnerName,
+        },
+      });
+    }
   };
 
   if (isMobile) {

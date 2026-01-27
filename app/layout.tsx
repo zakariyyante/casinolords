@@ -27,6 +27,21 @@ export default function RootLayout({
 
   return (
     <html lang='en' data-click-id=''>
+      <head>
+        {/* Privacy-friendly analytics by Plausible */}
+        <script
+          async
+          src='https://plausible.io/js/pa-M2PPa2udWaKWdrLwkcYLu.js'
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+              plausible.init()
+            `,
+          }}
+        />
+      </head>
       <body className={inter.className}>
         <GclidHandler />
         <Header />
