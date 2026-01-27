@@ -17,6 +17,9 @@ export default function BrandList({ partners, isMobile }: BrandListProps) {
     );
   }
 
+  // Sort partners by order key from lowest to highest
+  const sortedPartners = [...partners].sort((a, b) => a.order - b.order);
+
   return (
     <section className='container mx-auto px-4 py-8'>
       <div
@@ -24,7 +27,7 @@ export default function BrandList({ partners, isMobile }: BrandListProps) {
           isMobile ? 'max-w-md mx-auto' : 'max-w-5xl mx-auto'
         }`}
       >
-        {partners.map((partner, index) => (
+        {sortedPartners.map((partner, index) => (
           <BrandCard
             key={partner.id}
             partner={partner}

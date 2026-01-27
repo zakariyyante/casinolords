@@ -19,6 +19,7 @@ export interface Partner {
   highlights: Highlight[];
   partnerUrl: string;
   isMobile: boolean;
+  order: number;
   partner?: {
     name: string;
     logo: string;
@@ -70,6 +71,7 @@ export const mockPartners: Partner[] = [
     ],
     partnerUrl: "https://example-site.com?ref=",
     isMobile: false,
+    order: 1,
     partner: {
       name: "Premium Platform UK",
       logo: "premium-bet-logo.png",
