@@ -59,10 +59,16 @@ export async function fetchPartners(
 
     // Filter by isMobile on server side
     const filtered = partners.filter((p) => p.isMobile === isMobile);
-    return filtered;
+
+    // Sort by order key from lowest to highest
+    const sorted = filtered.sort((a, b) => (a.order || 999) - (b.order || 999));
+
+    return sorted;
   } catch (error) {
     console.error("Error fetching partners:", error);
     const { mockPartners } = await import("./mockDev");
-    return mockPartners.filter((p) => p.isMobile === isMobile);
+    const filtered = mockPartners.filter((p) => p.isMobile === isMobile);
+    // Sort by order key from lowest to highest
+    return filtered.sort((a, b) => (a.order || 999) - (b.order || 999));
   }
 }
