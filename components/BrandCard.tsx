@@ -45,13 +45,11 @@ export default function BrandCard({
     
     // Track with Vercel Analytics
     track('partner_click', { partner_name: partnerName });
-    
-    // Track with Plausible Analytics
-    if (typeof window !== 'undefined' && window.plausible) {
-      window.plausible('Brand Click', {
-        props: {
-          brand: partnerName,
-        },
+  
+    // Track with Umami Analytics
+    if (typeof window !== 'undefined' && window.umami) {
+      window.umami.track('partner_click', {
+        partner_name: partnerName,
       });
     }
   };

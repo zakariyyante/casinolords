@@ -28,19 +28,13 @@ export default function RootLayout({
   return (
     <html lang='en' data-click-id=''>
       <head>
-        {/* Privacy-friendly analytics by Plausible */}
+
+        {/* Umami Analytics */}
         <script
-          async
-          src='https://plausible.io/js/pa-M2PPa2udWaKWdrLwkcYLu.js'
+          defer
+          src='https://analytics.antetechnologies.com/script.js'
+          data-website-id='6cfef5fb-45ea-4116-85c3-2a766505920a'
         ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-              plausible.init()
-            `,
-          }}
-        />
       </head>
       <body className={inter.className}>
         <GclidHandler />
