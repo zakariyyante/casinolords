@@ -58,6 +58,7 @@ const casinosRawData: CasinoRawData[] = [
     url: "https://track-otn.com/trk.php?t=1643&c=2712&s1=BlueFox-{AccountCode}&clickid=",
     votes: 4821,
   },
+  
   {
     name: "MogoBet",
     logo: "/mogobet.webp",
