@@ -27,12 +27,19 @@ export default async function HomePage({
   // Only check URL param — cookie is only used for appending to affiliate links
   const hasGclid = !!(searchParams.gclid);
 
-  // mobile + gclid in URL → mobile brands; everything else → desktop brands
-  const showMobileBrands = isMobile && hasGclid;
-
   const gametypes = await fetchGametypes();
   const primaryGametype = gametypes.find((g) => g.order === 1) || gametypes[0];
-  const partners = await fetchPartners(primaryGametype.id, showMobileBrands);
+
+  // mobile + gclid → try mobile brands first, fall back to desktop if none exist
+  let partners;
+  if (isMobile && hasGclid) {
+    const mobilePartners = await fetchPartners(primaryGametype.id, true);
+    partners = mobilePartners.length > 0
+      ? mobilePartners
+      : await fetchPartners(primaryGametype.id, false);
+  } else {
+    partners = await fetchPartners(primaryGametype.id, false);
+  }
 
   return (
     <>
