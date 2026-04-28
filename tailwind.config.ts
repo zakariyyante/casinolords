@@ -10,12 +10,12 @@ const config: Config = {
     extend: {
       colors: {
         background: {
-          DEFAULT: "#020617",
-          light: "#0F172A",
+          DEFAULT: "#0A0A0F",
+          light: "#12121E",
         },
-        cta: "#22D3EE",
+        cta: "#F59E0B",
         text: "#E5E7EB",
-        panel: "#020617",
+        panel: "#0A0A0F",
       },
     },
   },

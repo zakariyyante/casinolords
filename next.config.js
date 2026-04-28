@@ -7,11 +7,11 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    domains: ['api.britwager.org'],
+    domains: ['api.casinolords.org'],
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'api.britwager.org',
+        hostname: 'api.casinolords.org',
         pathname: '/files/**',
       },
     ],
@@ -24,7 +24,7 @@ const nextConfig = {
     return [
       {
         source: '/files/:path*',
-        destination: 'https://api.britwager.org/files/:path*',
+        destination: 'https://api.casinolords.org/files/:path*',
       },
     ];
   },

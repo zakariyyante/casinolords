@@ -6,7 +6,7 @@ const getApiUrl = () => {
   if (envUrl) {
     return envUrl.endsWith("/") ? envUrl.slice(0, -1) : envUrl;
   }
-  return "https://api.britwager.org/api/v1";
+  return "https://api.casinolords.org/api/v1";
 };
 
 const API_URL = getApiUrl();

@@ -9,44 +9,44 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
-    question: "Is BritWager a licensed platform?",
+    question: "Is CasinoLords a licensed gambling operator?",
     answer:
-      "No, BritWager is an independent affiliate website that compares UK-licensed platforms. We do not provide services directly. All platforms featured on our site are licensed by the UK Gambling Commission.",
+      "No. CasinoLords is an independent affiliate website that reviews and compares UK-licensed operators. We do not offer gambling services directly. Every platform we list holds a valid licence from the UK Gambling Commission.",
   },
   {
-    question: "How do I claim the bonuses shown?",
+    question: "How do I claim the bonuses shown on the site?",
     answer:
-      "Click on any brand card to visit their website. Bonuses are typically available to new customers who meet the platform's terms and conditions. Always read the full terms before claiming any bonus.",
+      "Simply click any operator card to visit their website. Welcome bonuses are generally available to first-time customers who satisfy the operator's eligibility criteria. Make sure you read the full terms and conditions before claiming any offer.",
   },
   {
-    question: "Are the sites safe and secure?",
+    question: "Are the featured sites trustworthy?",
     answer:
-      "Yes, all platforms featured on BritWager are licensed by the UK Gambling Commission, which ensures they meet strict security, fairness, and responsible gaming standards.",
+      "Yes. Every operator shown on CasinoLords is regulated by the UK Gambling Commission, which enforces rigorous standards around player security, game fairness, and responsible gambling measures.",
   },
   {
-    question: "What payment methods are accepted?",
+    question: "What payment methods are supported?",
     answer:
-      "Payment methods vary by operator. Common methods include Visa, Mastercard, PayPal, Skrill, Neteller, and bank transfers. Check each operator's card for specific payment options.",
+      "Available payment options differ by operator. Common choices include Visa, Mastercard, PayPal, Skrill, Neteller, and bank transfers. Check the individual operator's page for a full breakdown of accepted methods.",
   },
   {
-    question: "How quickly can I withdraw my funds?",
+    question: "How fast are withdrawals processed?",
     answer:
-      "Withdrawal times vary by platform and payment method. Many UK-licensed platforms offer same-day or next-day withdrawals for e-wallets. Bank transfers typically take 3-5 business days.",
+      "Processing times vary depending on the platform and the withdrawal method chosen. Many UK-licensed sites pay out e-wallet requests the same day or within 24 hours. Standard bank transfers usually take 3–5 business days.",
   },
   {
-    question: "Is there a minimum deposit requirement?",
+    question: "Is there a minimum deposit amount?",
     answer:
-      "Most platforms have a minimum deposit requirement, typically around £10-£20. This information is usually displayed on each platform's card or in their terms and conditions.",
+      "Most operators require a minimum deposit, commonly between £10 and £20. You can find this information on each operator's card or within their terms and conditions page.",
   },
   {
-    question: "What should I do if I need help?",
+    question: "Where can I get help if gambling becomes a problem?",
     answer:
-      "If you need support, seek help immediately. Visit BeGambleAware.org, GamCare.org.uk, or call the National Gambling Helpline at 0808 8020 133. Links to support organizations are available in our footer.",
+      "Help is always available. Contact BeGambleAware.org, GamCare.org.uk, or call the free National Gambling Helpline on 0808 8020 133. Links to all support organisations are also found in the footer of every page.",
   },
   {
-    question: "Do you charge any fees for using your service?",
+    question: "Is there a charge for using CasinoLords?",
     answer:
-      "No, BritWager is completely free to use. We are an affiliate website, which means we may receive a commission from platforms when you sign up through our links, but this does not affect the bonuses or services you receive.",
+      "Not at all. CasinoLords is entirely free to use. We operate as an affiliate, meaning we may earn a referral fee when you sign up via one of our links. This arrangement does not affect the bonus values or quality of service you receive from the operator.",
   },
 ];
 

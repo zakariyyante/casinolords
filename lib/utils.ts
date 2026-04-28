@@ -23,10 +23,12 @@ export function getImageUrl(logo?: string): string {
   if (!logo) {
     return "/placeholder.svg";
   }
-  
-  // Construct the base URL with /api/v1
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://api.britwager.org/api/v1";
-  
-  // Return the full image URL with /api/v1/files/partners/
+
+  // Local public-folder paths (start with /) are served directly
+  if (logo.startsWith("/")) {
+    return logo;
+  }
+
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://api.casinolords.org/api/v1";
   return `${apiUrl}/files/partners/${logo}`;
 }

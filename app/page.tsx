@@ -12,9 +12,9 @@ export async function generateMetadata(): Promise<Metadata> {
   const primaryGametype = gametypes.find((g) => g.order === 1);
 
   return {
-    title: "BritWager - UK's Premier Affiliate Platform",
+    title: "CasinoLords - Top UK Casino & Betting Sites",
     description:
-      'Discover the best UK platforms with exclusive bonuses and offers',
+      'Find the finest UK-licensed casinos and betting platforms with top bonuses and fast payouts',
   };
 }
 
@@ -33,9 +33,9 @@ export default async function HomePage() {
   return (
     <>
       <Hero
-        headText={"BritWager - UK's Premier Gaming Platform"}
+        headText={"CasinoLords - The UK's Leading Casino Guide"}
         headParagraph={
-          'Discover the best UK platforms with exclusive bonuses and offers'
+          'Explore the finest UK-licensed casinos and betting sites, handpicked for top bonuses and fast payouts'
         }
         isMobile={isMobile}
       />

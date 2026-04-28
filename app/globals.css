@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --background: #020617;
-  --background-light: #0F172A;
-  --cta: #22D3EE;
+  --background: #0A0A0F;
+  --background-light: #12121E;
+  --cta: #F59E0B;
   --text: #E5E7EB;
-  --panel: #020617;
+  --panel: #0A0A0F;
 }
 
 body {
@@ -18,5 +18,33 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.25s ease-out;
+}
+
+@media (min-width: 768px) {
+  @keyframes slide-up {
+    from {
+      transform: translateY(16px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 }

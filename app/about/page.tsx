@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us - BritWager",
-  description: "Learn about BritWager and our mission to help UK users find the best platforms",
+  title: "About Us - CasinoLords",
+  description: "Learn about CasinoLords and our mission to help UK players find the best casinos and betting sites",
 };
 
 export default function AboutPage() {
@@ -12,24 +12,24 @@ export default function AboutPage() {
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-cta mb-8">About BritWager</h1>
+        <h1 className="text-4xl font-bold text-cta mb-8">About CasinoLords</h1>
 
         <div className="prose prose-invert max-w-none space-y-6 text-text/90">
           <p className="text-lg leading-relaxed">
-            BritWager is an independent affiliate website dedicated to helping
-            UK users discover and compare the best licensed platforms
-            in the United Kingdom. Founded with a commitment to transparency,
-            safety, and responsible gaming, we provide comprehensive
-            information about UK-licensed brands.
+            CasinoLords is an independent affiliate platform dedicated to
+            guiding UK players towards the best licensed casinos and betting
+            sites in the country. Built on the principles of transparency,
+            player safety, and responsible gambling, we deliver detailed
+            comparisons of fully regulated UK operators.
           </p>
 
           <h2 className="text-2xl font-bold text-cta mt-8 mb-4">Our Mission</h2>
           <p className="leading-relaxed">
-            Our mission is to simplify the process of finding the right
-            platform for UK players. We carefully review and compare
-            UK-licensed brands, highlighting their features, bonuses,
-            payment methods, and customer service to help you make informed
-            decisions.
+            We exist to make choosing the right casino or betting site
+            straightforward for UK players. By carefully evaluating and
+            comparing UKGC-licensed operators on their bonuses, features,
+            payment options, and support quality, we give you the insight
+            needed to decide with confidence.
           </p>
 
           <h2 className="text-2xl font-bold text-cta mt-8 mb-4">
@@ -37,52 +37,51 @@ export default function AboutPage() {
           </h2>
           <ul className="space-y-3 list-disc list-inside">
             <li>
-              Compare UK-licensed platforms based on bonuses, features,
-              and services
+              Compare UK-licensed casinos and betting sites on bonuses,
+              features, and services
             </li>
             <li>
-              Provide exclusive bonus offers and promotional information
+              Curate exclusive bonus offers and the latest promotional deals
             </li>
             <li>
-              Offer transparent, honest reviews and comparisons
+              Publish honest, impartial reviews and side-by-side comparisons
             </li>
             <li>
-              Promote responsible gaming and provide access to support
+              Champion responsible gambling and connect players with support
               resources
             </li>
           </ul>
 
           <h2 className="text-2xl font-bold text-cta mt-8 mb-4">
-            Our Commitment to Safety
+            Our Commitment to Player Safety
           </h2>
           <p className="leading-relaxed">
-            All platforms featured on BritWager are licensed by the UK
-            Gambling Commission. We only feature platforms that meet strict
-            regulatory standards for security, fairness, and responsible
-            gaming practices.
+            Every operator listed on CasinoLords is licenced by the UK
+            Gambling Commission. We only showcase platforms that satisfy strict
+            regulatory requirements covering player protection, game integrity,
+            and responsible gambling practices.
           </p>
 
           <h2 className="text-2xl font-bold text-cta mt-8 mb-4">
-            Responsible Gaming
+            Responsible Gambling
           </h2>
           <p className="leading-relaxed">
-            We are committed to promoting responsible gaming. All platforms on
-            our site are required to provide tools for responsible gaming,
-            including deposit limits, self-exclusion options, and access to
-            support services. If you need help, please
-            visit the support organizations listed in our footer.
+            We take our responsibility to players seriously. All operators on
+            our platform must provide tools that support responsible gambling,
+            including deposit limits, reality checks, and self-exclusion. If
+            you ever need help, please visit the support organisations
+            linked in our footer.
           </p>
 
           <div className="bg-panel border border-cta/30 rounded-lg p-6 my-8">
             <h3 className="text-xl font-bold text-cta mb-3">
-              Independent Affiliate
+              Independent Affiliate Disclosure
             </h3>
             <p className="text-sm leading-relaxed">
-              BritWager is an independent affiliate website. We may receive
-              commissions from platforms when you sign up through our links, but
-              this does not influence our reviews or the information we provide.
-              Our goal is to help you find the best platform for your
-              needs.
+              CasinoLords is an independent affiliate. We may receive a
+              commission when you register via our links, but this never
+              influences our reviews or the information we share. Our sole
+              objective is to help you find the operator that suits you best.
             </p>
           </div>
 

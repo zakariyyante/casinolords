@@ -12,9 +12,9 @@ export const revalidate = 0;
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "BritWager - UK's Premier Affiliate Platform",
+  title: "CasinoLords - Top UK Casino & Betting Sites",
   description:
-    'Discover the best UK platforms with exclusive bonuses and offers',
+    'Find the finest UK-licensed casinos and betting platforms with top bonuses and fast payouts',
 };
 
 export default function RootLayout({

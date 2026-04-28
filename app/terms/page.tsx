@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions - BritWager",
-  description: "Read BritWager's terms and conditions for using our affiliate platform",
+  title: "Terms and Conditions - CasinoLords",
+  description: "Read CasinoLords' terms and conditions for using our affiliate comparison platform",
 };
 
 export default function TermsPage() {
@@ -26,9 +26,10 @@ export default function TermsPage() {
               1. Acceptance of Terms
             </h2>
             <p className="leading-relaxed">
-              By accessing and using BritWager.org ("the Website"), you accept
-              and agree to be bound by these Terms and Conditions. If you do not
-              agree to these terms, please do not use this Website.
+              By accessing and using CasinoLords.org ("the Website"), you
+              confirm that you have read, understood, and agree to be bound by
+              these Terms and Conditions. If you do not accept these terms,
+              please discontinue use of this Website.
             </p>
           </section>
 
@@ -37,9 +38,9 @@ export default function TermsPage() {
               2. Age Restriction
             </h2>
             <p className="leading-relaxed">
-              You must be 18 years of age or older to use this Website. By using
-              this Website, you confirm that you are at least 18 years old and
-              of legal age to participate in your jurisdiction.
+              You must be at least 18 years old to use this Website. By
+              continuing to browse, you confirm that you are of legal age
+              in your jurisdiction to engage with gambling-related content.
             </p>
           </section>
 
@@ -48,11 +49,11 @@ export default function TermsPage() {
               3. Affiliate Relationship
             </h2>
             <p className="leading-relaxed">
-              BritWager is an independent affiliate website. We may receive
-              commissions from platforms when you sign up through links
-              on our Website. This does not affect the bonuses, services, or
-              information we provide. All reviews and comparisons are based on
-              our independent assessment.
+              CasinoLords operates as an independent affiliate. We may receive
+              a referral fee when you register with an operator through a link
+              on our Website. This arrangement has no impact on the bonuses,
+              services, or impartiality of the information we provide. All
+              evaluations are based on our own independent assessment.
             </p>
           </section>
 
@@ -61,11 +62,11 @@ export default function TermsPage() {
               4. Third-Party Operators
             </h2>
             <p className="leading-relaxed">
-              All platforms featured on BritWager are licensed by the UK
-              Gambling Commission. However, BritWager is not responsible for the
-              content, services, terms, or practices of third-party
-              platforms. Your relationship with any platform is
-              independent of BritWager.
+              All operators featured on CasinoLords are licensed by the UK
+              Gambling Commission. However, CasinoLords bears no responsibility
+              for the content, terms, promotions, or conduct of any
+              third-party operator. Your dealings with any operator are
+              entirely separate from CasinoLords.
             </p>
           </section>
 
@@ -74,23 +75,23 @@ export default function TermsPage() {
               5. Bonuses and Offers
             </h2>
             <p className="leading-relaxed">
-              All bonuses and offers are subject to the terms and conditions of
-              the respective platforms. BritWager does not guarantee the
-              availability, accuracy, or terms of any bonus or offer. Always read
-              the platform's terms and conditions before claiming any bonus.
+              All bonuses and promotional offers are governed by the terms
+              of the individual operator. CasinoLords makes no guarantees
+              regarding the availability, accuracy, or conditions attached to
+              any bonus. Always review an operator's full terms before
+              participating in any promotion.
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-cta mb-4">
-              6. Responsible Gaming
+              6. Responsible Gambling
             </h2>
             <p className="leading-relaxed">
-              Entertainment can be addictive. Please play responsibly and only use
-              what you can afford to lose. If you need help,
-              seek support immediately from organizations like
-              BeGambleAware, GamCare, or the National Gambling Helpline (0808
-              8020 133).
+              Gambling can be addictive. Please play within your means and
+              set sensible limits. If you feel your gambling is becoming a
+              problem, seek support straight away from BeGambleAware, GamCare,
+              or the National Gambling Helpline (0808 8020 133).
             </p>
           </section>
 
@@ -99,10 +100,11 @@ export default function TermsPage() {
               7. Limitation of Liability
             </h2>
             <p className="leading-relaxed">
-              BritWager provides information "as is" without warranties of any
-              kind. We are not liable for any losses, damages, or issues arising
-              from your use of third-party platforms or the information
-              provided on this Website.
+              CasinoLords provides all content on an "as is" basis without
+              warranties of any kind. We accept no liability for losses,
+              damages, or disputes arising from your use of third-party
+              operators or from reliance on information published on this
+              Website.
             </p>
           </section>
 
@@ -111,21 +113,22 @@ export default function TermsPage() {
               8. Intellectual Property
             </h2>
             <p className="leading-relaxed">
-              All content on BritWager, including text, graphics, logos, and
-              images, is the property of BritWager or its licensors and is
-              protected by copyright and other intellectual property laws.
+              All content on CasinoLords — including text, graphics, logos,
+              and imagery — is the property of CasinoLords or its licensors
+              and is protected by copyright and applicable intellectual
+              property legislation.
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-cta mb-4">
-              9. Changes to Terms
+              9. Amendments to Terms
             </h2>
             <p className="leading-relaxed">
-              BritWager reserves the right to modify these Terms and Conditions
-              at any time. Changes will be effective immediately upon posting.
-              Your continued use of the Website constitutes acceptance of any
-              modified terms.
+              CasinoLords reserves the right to amend these Terms and
+              Conditions at any time. Updated terms take effect immediately
+              upon publication. Continued use of the Website after any
+              amendment constitutes your acceptance of the revised terms.
             </p>
           </section>
 
@@ -134,8 +137,8 @@ export default function TermsPage() {
               10. Contact Information
             </h2>
             <p className="leading-relaxed">
-              If you have questions about these Terms and Conditions, please
-              contact us at contact@britwager.org.
+              If you have any queries regarding these Terms and Conditions,
+              please reach us at contact@casinolords.org.
             </p>
           </section>
         </div>

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us - BritWager",
-  description: "Get in touch with BritWager for inquiries, support, or feedback",
+  title: "Contact Us - CasinoLords",
+  description: "Get in touch with CasinoLords for enquiries, partnership requests, or feedback",
 };
 
 export default function ContactPage() {
@@ -13,42 +13,44 @@ export default function ContactPage() {
 
         <div className="prose prose-invert max-w-none space-y-6 text-text/90">
           <p className="text-lg leading-relaxed">
-            We'd love to hear from you! Whether you have questions, feedback, or
-            need assistance, please don't hesitate to reach out.
+            We welcome your messages. Whether you have a question, some
+            feedback, or simply need a hand, feel free to get in touch and
+            we'll do our best to help.
           </p>
 
           <div className="bg-panel border border-cta/30 rounded-lg p-6 my-8">
             <h2 className="text-2xl font-bold text-cta mb-4">
-              General Inquiries
+              General Enquiries
             </h2>
             <p className="leading-relaxed mb-4">
-              For general inquiries about BritWager, our services, or the
-              platforms featured on our site, please use the contact
-              information below.
+              For any questions about CasinoLords, the services we offer, or
+              the operators featured on our site, reach us using the details
+              below.
             </p>
             <p className="text-cta font-semibold">
-              Email: contact@britwager.org
+              Email: contact@casinolords.org
             </p>
           </div>
 
           <div className="bg-panel border border-cta/30 rounded-lg p-6 my-8">
             <h2 className="text-2xl font-bold text-cta mb-4">
-              Platform Inquiries
+              Operator Enquiries
             </h2>
             <p className="leading-relaxed">
-              If you are a UK-licensed platform interested in being
-              featured on BritWager, please contact us with your licensing
-              information and details about your services.
+              If you represent a UK-licensed casino or betting operator and
+              would like to be considered for a listing on CasinoLords, please
+              get in touch with your licence details and a summary of your
+              platform's services.
             </p>
           </div>
 
           <div className="bg-panel border border-cta/30 rounded-lg p-6 my-8">
             <h2 className="text-2xl font-bold text-cta mb-4">
-              Support Resources
+              Gambling Support
             </h2>
             <p className="leading-relaxed mb-4">
-              If you need help, please contact one of
-              these organizations:
+              If you or someone you know needs support with problem gambling,
+              please contact one of these organisations:
             </p>
             <ul className="space-y-2 list-disc list-inside">
               <li>
@@ -84,9 +86,9 @@ export default function ContactPage() {
               Response Times
             </h3>
             <p className="text-sm leading-relaxed">
-              We aim to respond to all inquiries within 2-3 business days.
-              For urgent matters, please contact
-              the support organizations listed above immediately.
+              We aim to reply to all messages within 2–3 business days. For
+              urgent welfare concerns, please contact one of the support
+              organisations above straight away.
             </p>
           </div>
         </div>

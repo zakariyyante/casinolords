@@ -6,10 +6,10 @@ interface HeroProps {
 
 export default function Hero({ headText, headParagraph, isMobile }: HeroProps) {
   const badges = [
-    "🛡️ Certified & Protected",
+    "🛡️ UKGC Licensed Operators",
     "⚡ Same-Day Withdrawals",
-    "📄 Minimal Documentation",
-    "👁️ Privacy-First Gaming",
+    "🎁 Exclusive Welcome Bonuses",
+    "🔒 Safe & Secure Gaming",
   ];
 
   if (isMobile) {

@@ -1,5 +1,6 @@
 import { Partner } from '@/lib/mockDev';
 import BrandCard from './BrandCard';
+import BrandModal from './BrandModal';
 
 interface BrandListProps {
   partners: Partner[];
@@ -17,17 +18,14 @@ export default function BrandList({ partners, isMobile }: BrandListProps) {
     );
   }
 
-  // Sort partners by order key from lowest to highest
-  const sortedPartners = [...partners].sort((a, b) => a.order - b.order);
+  const sorted = [...partners].sort((a, b) => a.order - b.order);
+  const featured = sorted.slice(0, 3);
+  const extra = sorted.slice(3);
 
   return (
     <section className='container mx-auto px-4 py-8'>
-      <div
-        className={`flex flex-col gap-4 ${
-          isMobile ? 'max-w-md mx-auto' : 'max-w-5xl mx-auto'
-        }`}
-      >
-        {sortedPartners.map((partner, index) => (
+      <div className={`flex flex-col gap-4 ${isMobile ? 'max-w-md mx-auto' : 'max-w-5xl mx-auto'}`}>
+        {featured.map((partner, index) => (
           <BrandCard
             key={partner.id}
             partner={partner}
@@ -36,6 +34,12 @@ export default function BrandList({ partners, isMobile }: BrandListProps) {
           />
         ))}
       </div>
+
+      {extra.length > 0 && (
+        <div className={isMobile ? 'max-w-md mx-auto' : 'max-w-5xl mx-auto'}>
+          <BrandModal extraPartners={extra} isMobile={isMobile} />
+        </div>
+      )}
     </section>
   );
 }
