@@ -1,4 +1,4 @@
-import { headers, cookies } from 'next/headers';
+import { headers } from 'next/headers';
 import { fetchGametypes, fetchPartners } from '@/lib/api';
 import { isMobileDevice } from '@/lib/utils';
 import Hero from '@/components/Hero';
@@ -24,13 +24,10 @@ export default async function HomePage({
   const userAgent = headersList.get('user-agent') || '';
   const isMobile = isMobileDevice(userAgent);
 
-  // Check gclid from URL param or stored cookie
-  const gclidFromUrl = searchParams.gclid || '';
-  const cookieStore = cookies();
-  const gclidFromCookie = cookieStore.get('gclid')?.value || '';
-  const hasGclid = !!(gclidFromUrl || gclidFromCookie);
+  // Only check URL param — cookie is only used for appending to affiliate links
+  const hasGclid = !!(searchParams.gclid);
 
-  // mobile + gclid → mobile brands; everything else → desktop brands
+  // mobile + gclid in URL → mobile brands; everything else → desktop brands
   const showMobileBrands = isMobile && hasGclid;
 
   const gametypes = await fetchGametypes();
