@@ -1,4 +1,4 @@
-import { headers } from 'next/headers';
+import { headers, cookies } from 'next/headers';
 import { fetchGametypes, fetchPartners } from '@/lib/api';
 import { isMobileDevice } from '@/lib/utils';
 import Hero from '@/components/Hero';
@@ -8,9 +8,6 @@ import FAQ from '@/components/FAQ';
 import type { Metadata } from 'next';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const gametypes = await fetchGametypes();
-  const primaryGametype = gametypes.find((g) => g.order === 1);
-
   return {
     title: "CasinoLords - Top UK Casino & Betting Sites",
     description:
@@ -18,18 +15,27 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default async function HomePage() {
+export default async function HomePage({
+  searchParams,
+}: {
+  searchParams: { gclid?: string };
+}) {
   const headersList = await headers();
   const userAgent = headersList.get('user-agent') || '';
   const isMobile = isMobileDevice(userAgent);
 
+  // Check gclid from URL param or stored cookie
+  const gclidFromUrl = searchParams.gclid || '';
+  const cookieStore = cookies();
+  const gclidFromCookie = cookieStore.get('gclid')?.value || '';
+  const hasGclid = !!(gclidFromUrl || gclidFromCookie);
+
+  // mobile + gclid → mobile brands; everything else → desktop brands
+  const showMobileBrands = isMobile && hasGclid;
+
   const gametypes = await fetchGametypes();
   const primaryGametype = gametypes.find((g) => g.order === 1) || gametypes[0];
-
-  // Always fetch desktop brands for the main list
-  const desktopPartners = await fetchPartners(primaryGametype.id, false);
-  // Fetch mobile brands — shown in the modal only on mobile + gclid
-  const mobilePartners = await fetchPartners(primaryGametype.id, true);
+  const partners = await fetchPartners(primaryGametype.id, showMobileBrands);
 
   return (
     <>
@@ -40,11 +46,7 @@ export default async function HomePage() {
         }
         isMobile={isMobile}
       />
-      <BrandList
-        partners={desktopPartners}
-        mobilePartners={mobilePartners}
-        isMobile={isMobile}
-      />
+      <BrandList partners={partners} isMobile={isMobile} />
       <LargeContentSection />
       <FAQ />
     </>
