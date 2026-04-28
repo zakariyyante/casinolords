@@ -1,13 +1,13 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Partner } from '@/lib/mockDev';
-import { calculateRating, calculateStars, getImageUrl } from '@/lib/utils';
+import { Casino } from '@/lib/mockDev';
+import { calculateStars, getImageUrl } from '@/lib/utils';
 import { getStoredGclid } from '@/lib/cookies';
 import { track } from '@vercel/analytics';
 
 interface BrandCardProps {
-  partner: Partner;
+  partner: Casino;
   order: number;
   isMobile: boolean;
 }
@@ -34,36 +34,37 @@ function StarRow({ stars }: { stars: number }) {
 }
 
 export default function BrandCard({ partner, order, isMobile }: BrandCardProps) {
-  const [linkUrl, setLinkUrl] = useState(partner.partnerUrl);
+  const [linkUrl, setLinkUrl] = useState(partner.url || (partner as any).partnerUrl || '');
   const [imageError, setImageError] = useState(false);
-  const [votes, setVotes] = useState(0);
 
-  const rating = calculateRating(order);
+  const rating = partner.rating ?? (10 - (order - 1) * 0.1);
   const stars = calculateStars(order);
+  const votes = partner.votes ?? 0;
+  const bonus = partner.bonus || (partner as any).bonusText || '';
+  const badge = partner.badge;
 
   useEffect(() => {
-    setVotes(Math.floor(Math.random() * 5000) + 1000);
     const gclid = getStoredGclid();
-    if (gclid) setLinkUrl(`${partner.partnerUrl}${gclid}`);
-  }, [partner.partnerUrl]);
+    if (gclid) setLinkUrl(`${partner.url || (partner as any).partnerUrl || ''}${gclid}`);
+  }, [partner.url]);
 
-  const logoPath = partner.partner?.logo || partner.logo;
+  const logoPath = partner.logo || (partner as any).partner?.logo;
   const imageUrl = getImageUrl(logoPath);
   const displayImageUrl = imageError ? '/placeholder.svg' : imageUrl;
 
   const handleClick = () => {
-    const name = partner?.partner?.name || partner.name;
-    track('partner_click', { partner_name: name });
+    track('partner_click', { partner_name: partner.name });
     if (typeof window !== 'undefined' && window.umami) {
-      window.umami.track('partner_click', { partner_name: name });
+      window.umami.track('partner_click', { partner_name: partner.name });
     }
   };
 
-  const logoBoxClass = (size: 'sm' | 'lg') =>
-    `${size === 'lg' ? 'w-44 h-44' : 'w-44 h-28'} bg-background-light rounded-lg overflow-hidden border border-cta/20 flex items-center justify-center flex-shrink-0`;
-
   const renderLogo = (size: 'sm' | 'lg') => (
-    <div className={logoBoxClass(size)}>
+    <div
+      className={`${
+        size === 'lg' ? 'w-44 h-44' : 'w-44 h-28'
+      } bg-background-light rounded-lg overflow-hidden border border-cta/20 flex items-center justify-center flex-shrink-0`}
+    >
       <img
         src={displayImageUrl}
         alt={partner.name}
@@ -76,10 +77,17 @@ export default function BrandCard({ partner, order, isMobile }: BrandCardProps) 
   if (isMobile) {
     return (
       <div className='bg-panel border border-cta/30 rounded-lg p-4 hover:border-cta transition-colors'>
+        {badge && (
+          <div className='mb-3'>
+            <span className='px-2 py-0.5 bg-cta text-background text-xs font-bold rounded-full'>
+              {badge}
+            </span>
+          </div>
+        )}
         <div className='flex justify-between gap-4 mb-4'>
           {renderLogo('sm')}
           <div className='flex flex-col justify-center flex-shrink-0'>
-            <div className='text-2xl font-bold text-cta mb-1'>{rating}</div>
+            <div className='text-2xl font-bold text-cta mb-1'>{rating.toFixed(1)}</div>
             <StarRow stars={stars} />
             {votes > 0 && (
               <div className='text-xs text-text/60 mt-1'>{votes.toLocaleString()} votes</div>
@@ -87,7 +95,7 @@ export default function BrandCard({ partner, order, isMobile }: BrandCardProps) 
           </div>
         </div>
         <div className='space-y-3'>
-          <p className='text-sm text-text/90 font-medium'>{partner.bonusText}</p>
+          <p className='text-sm text-text/90 font-medium'>{bonus}</p>
           <a
             href={linkUrl}
             target='_blank'
@@ -105,17 +113,24 @@ export default function BrandCard({ partner, order, isMobile }: BrandCardProps) 
 
   return (
     <div className='bg-panel border border-cta/30 rounded-lg p-6 hover:border-cta transition-all hover:shadow-lg hover:shadow-cta/20'>
+      {badge && (
+        <div className='mb-3'>
+          <span className='px-3 py-0.5 bg-cta text-background text-xs font-bold rounded-full'>
+            {badge}
+          </span>
+        </div>
+      )}
       <div className='flex items-center gap-6'>
         {renderLogo('lg')}
         <div className='flex-1'>
           <div className='mb-3 flex items-center gap-3'>
-            <span className='text-2xl font-bold text-cta'>{rating}</span>
+            <span className='text-2xl font-bold text-cta'>{rating.toFixed(1)}</span>
             <StarRow stars={stars} />
             {votes > 0 && (
               <span className='text-sm text-text/60'>({votes.toLocaleString()} votes)</span>
             )}
           </div>
-          <p className='text-text/90 mb-4'>{partner.bonusText}</p>
+          <p className='text-text/90 mb-4'>{bonus}</p>
           <a
             href={linkUrl}
             target='_blank'
