@@ -23,12 +23,13 @@ export default async function HomePage() {
   const userAgent = headersList.get('user-agent') || '';
   const isMobile = isMobileDevice(userAgent);
 
-  // Fetch gametypes and use order === 1 for hero
   const gametypes = await fetchGametypes();
   const primaryGametype = gametypes.find((g) => g.order === 1) || gametypes[0];
 
-  // Fetch partners - ALWAYS fetch desktop brands (isMobile: false)
-  const partners = await fetchPartners(primaryGametype.id, false);
+  // Always fetch desktop brands for the main list
+  const desktopPartners = await fetchPartners(primaryGametype.id, false);
+  // Fetch mobile brands — shown in the modal only on mobile + gclid
+  const mobilePartners = await fetchPartners(primaryGametype.id, true);
 
   return (
     <>
@@ -39,7 +40,11 @@ export default async function HomePage() {
         }
         isMobile={isMobile}
       />
-      <BrandList partners={partners} isMobile={isMobile} />
+      <BrandList
+        partners={desktopPartners}
+        mobilePartners={mobilePartners}
+        isMobile={isMobile}
+      />
       <LargeContentSection />
       <FAQ />
     </>
